@@ -5,7 +5,7 @@
   "description": "Practising test-driven development (TDD) with Jest as part of The Odin Project's \"Full Stack JavaScript\" course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "Henry Lin <hello@henrylin.io>",
