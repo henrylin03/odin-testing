@@ -26,3 +26,12 @@ describe("Check numbers are correctly divided", () => {
     expect(calculator.divide(1, 2)).toBeCloseTo(0.5); // avoids rounding error
   });
 });
+
+describe("Check numbers are correctly multiplying", () => {
+  test("Two times five is ten", () => {
+    expect(calculator.multiply(2, 5)).toBe(10);
+  });
+  test("Negative two times half is negative one", () => {
+    expect(calculator.multiply(-2, 0.5)).toBe(-1);
+  });
+});
