@@ -4,6 +4,9 @@ describe("Shift string using Ceasar cipher", () => {
   test("'henry' shifted by 10 should be 'roxbi'", () => {
     expect(caesarCipher("henry", 10)).toBe("roxbi");
   });
+  test("'HENRY' shifted by 10 should be 'ROXBI'", () => {
+    expect(caesarCipher("HENRY", 10)).toBe("ROXBI");
+  });
   test("Text wrapping when input letters go out of bounds", () => {
     expect(caesarCipher("xyz", 3)).toBe("abc");
   });
