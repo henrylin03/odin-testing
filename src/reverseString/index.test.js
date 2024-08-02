@@ -7,4 +7,7 @@ describe("Check string has reversed", () => {
   test("Palindrome stays the same", () => {
     expect(reverseString("racecar")).toBe("racecar");
   });
+  test("Case is unaffected", () => {
+    expect(reverseString("xYzAbC")).toBe("CbAzYx");
+  });
 });
