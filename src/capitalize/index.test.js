@@ -1,4 +1,4 @@
-import { capitalize } from ".";
+import capitalize from ".";
 
 describe("First letter is capitalised", () => {
   test("All lowercase word capitalised", () => {
