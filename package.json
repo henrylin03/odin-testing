@@ -1,0 +1,13 @@
+{
+  "name": "odin-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Practising test-driven development (TDD) with Jest as part of The Odin Project's \"Full Stack JavaScript\" course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Henry Lin <hello@henrylin.io>",
+  "license": "MIT"
+}
