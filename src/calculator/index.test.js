@@ -17,3 +17,12 @@ describe("Check numbers are correctly subtracted", () => {
     expect(calculator.subtract(0.9, 0.8)).toBeCloseTo(0.1); // avoids rounding error
   });
 });
+
+describe("Check numbers are correctly divided", () => {
+  test("Forty divided by two is twenty", () => {
+    expect(calculator.divide(40, 2)).toBe(20);
+  });
+  test("One divided by two is half", () => {
+    expect(calculator.divide(1, 2)).toBeCloseTo(0.5); // avoids rounding error
+  });
+});
