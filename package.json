@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Henry Lin <hello@henrylin.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
