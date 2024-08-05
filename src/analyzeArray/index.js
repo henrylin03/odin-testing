@@ -3,7 +3,9 @@ const analyzeArray = (nums) => {
     nums.reduce((accumulator, currentValue) => accumulator + currentValue) /
     nums.length;
 
-  return { average };
+  const min = Math.min(...nums);
+
+  return { average, min };
 };
 
 export default analyzeArray;
