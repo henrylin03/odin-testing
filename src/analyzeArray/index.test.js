@@ -1,5 +1,26 @@
 import analyzeArray from ".";
 
+describe("Check all properties are returned for a given array", () => {
+  test("Average is 4, min is 1, max is 8, length is 6 for input array", () => {
+    const obj = analyzeArray([1, 8, 3, 4, 2, 6]);
+    expect(obj).toEqual({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6,
+    });
+  });
+  test("Empty input array returns an average of null, min of null, max of null, and length of zero", () => {
+    const obj = analyzeArray([]);
+    expect(obj).toEqual({
+      average: null,
+      min: null,
+      max: null,
+      length: 0,
+    });
+  });
+});
+
 describe("Check correct average", () => {
   test("Average of two and four is three", () => {
     const obj = analyzeArray([2, 4]);

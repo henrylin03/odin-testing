@@ -1,10 +1,13 @@
 const analyzeArray = (nums) => {
-  const average =
-    nums.reduce((accumulator, currentValue) => accumulator + currentValue) /
-    nums.length;
+  const isEmptyArray = !nums?.length;
 
-  const min = Math.min(...nums);
-  const max = Math.max(...nums);
+  const average = isEmptyArray
+    ? null
+    : nums.reduce((accumulator, currentValue) => accumulator + currentValue) /
+      nums.length;
+
+  const min = isEmptyArray ? null : Math.min(...nums);
+  const max = isEmptyArray ? null : Math.max(...nums);
   const length = nums.length;
 
   return { average, min, max, length };
