@@ -40,3 +40,13 @@ describe("Correct maximum number is returned", () => {
     expect(obj.max).toBe(8);
   });
 });
+
+describe("Correct length of array is returned", () => {
+  test("Single element array", () => {
+    expect(analyzeArray([1]).length).toBe(1);
+  });
+  test("Multi-element array", () => {
+    const obj = analyzeArray([1, 8, 3, 4, 2, 6]);
+    expect(obj.length).toBe(6);
+  });
+});
