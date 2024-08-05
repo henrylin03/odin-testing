@@ -19,6 +19,11 @@ describe("Check all properties are returned for a given array", () => {
       length: 0,
     });
   });
+  test("Calling analyzeArray without any argument throws an error", () => {
+    expect(() => analyzeArray()).toThrow(
+      "You have not provided an array of numbers"
+    );
+  });
 });
 
 describe("Check correct average", () => {
