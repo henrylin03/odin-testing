@@ -4,8 +4,9 @@ const analyzeArray = (nums) => {
     nums.length;
 
   const min = Math.min(...nums);
+  const max = Math.max(...nums);
 
-  return { average, min };
+  return { average, min, max };
 };
 
 export default analyzeArray;

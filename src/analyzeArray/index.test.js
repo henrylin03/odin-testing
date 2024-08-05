@@ -29,3 +29,14 @@ describe("Correct minimum number is returned", () => {
     expect(obj.min).toBe(1);
   });
 });
+
+describe("Correct maximum number is returned", () => {
+  test("The largest number in the following array is negative", () => {
+    const obj = analyzeArray([-5, -3, -2.5, -1000, -5000]);
+    expect(obj.max).toBe(-2.5);
+  });
+  test("The largest number in the following array is non-zero and positive", () => {
+    const obj = analyzeArray([1, 8, 3, 4, 2, 6]);
+    expect(obj.max).toBe(8);
+  });
+});
