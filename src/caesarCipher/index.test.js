@@ -31,5 +31,8 @@ describe("Punctuations, spaces, and other non-alphabetical characters should rem
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
 
-//todo: shift negative numbers
-//todo: handle str not given OR shift not given
+describe("Shift letters by negative shift factor", () => {
+  test("'xyz' shifted by -3 places is 'uvw'", () => {
+    expect(caesarCipher("xyz", -3)).toBe("uvw");
+  });
+});
