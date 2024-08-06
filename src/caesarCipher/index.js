@@ -1,37 +1,19 @@
-const caesarCipher = (str, shiftFactor) => {
+const caesarCipher = (str, shift) => {
   let res = "";
-  const LETTERS_IN_ALPHABET = 26;
-  const isLetter = (character) =>
-    character.toLowerCase() !== character.toUpperCase();
+  [...str].forEach((char) => {
+    const isLetter = char.toLowerCase() !== char.toUpperCase();
+    if (!isLetter) return (res += char);
 
-  // helper
-  const shiftLetter = (letter) => {
-    const code = letter.charCodeAt(0);
-    console.log("\nletter:", letter);
-    console.log("code:", code);
-    const isUpperCase = (letter) => letter === letter.toUpperCase();
+    const code = char.charCodeAt(0);
+    const isUpperCase = char === char.toUpperCase();
+    const codeForLetterA = isUpperCase ? 65 : 97;
 
-    if (isUpperCase) {
-      console.log("code - 97 -> CODE", code - 97);
-      console.log("add shift factor CODE", code - 97 + shiftFactor);
-      console.log("modulo 26 CODE", (code - 97 + shiftFactor) % 26);
-      console.log("final code", ((code - 97 + shiftFactor) % 26) + 97);
-      return String.fromCharCode(((code - 97 + shiftFactor) % LETTERS_IN_ALPHABET) + 97);
-    }
-    return String.fromCharCode(((code - 65 + shiftFactor) % LETTERS_IN_ALPHABET) + 65);
-  };
+    const shiftedCode = ((code - codeForLetterA + shift) % 26) + codeForLetterA;
 
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
-    // console.log(char);
-    if (isLetter(char)) char = shiftLetter(char);
-    console.log(char);
-    res += char;
-  }
+    res += String.fromCharCode(shiftedCode);
+  });
 
   return res;
 };
 
-// export default caesarCipher;
-
-caesarCipher("HENRY", 10);
+export default caesarCipher;
