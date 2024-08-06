@@ -8,3 +8,24 @@ describe("Check string has shifted within range of alphabet", () => {
     expect(caesarCipher("ABC", 4)).toBe("EFG");
   });
 });
+
+describe("Test alphabet wrapping for lowercase letters", () => {
+  test("'xyz' shifted by 3 places is 'abc'", () => {
+    expect(caesarCipher("xyz", 3)).toBe("abc");
+  });
+});
+
+describe("Test alphabet wrapping for uppercase letters", () => {
+  test("'XYZ' shifted by 3 places is 'ABC'", () => {
+    expect(caesarCipher("XYZ", 3)).toBe("ABC");
+  });
+});
+
+describe("Test case preservation for mixed case", () => {
+  test("'HeLLo' shifted by 3 places is 'KhOOr'", () => {
+    expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+  });
+});
+
+//todo: shift negative numbers
+//todo: handle str not given OR shift not given

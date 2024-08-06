@@ -2,7 +2,13 @@ const caesarCipher = (str, shift) => {
   let res = "";
   [...str].forEach((char) => {
     const code = char.charCodeAt(0);
-    res += String.fromCharCode(code + shift);
+
+    const isUpperCase = char === char.toUpperCase();
+    const codeForLetterA = isUpperCase ? 65 : 97;
+
+    const shiftedCode = ((code - codeForLetterA + shift) % 26) + codeForLetterA;
+    
+    res += String.fromCharCode(shiftedCode);
   });
 
   return res;
