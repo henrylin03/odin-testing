@@ -27,5 +27,9 @@ describe("Test case preservation for mixed case", () => {
   });
 });
 
+describe("Punctuations, spaces, and other non-alphabetical characters should remain unchanged", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
+
 //todo: shift negative numbers
 //todo: handle str not given OR shift not given
